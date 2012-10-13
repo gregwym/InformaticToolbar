@@ -18,6 +18,9 @@
 		2539298C1629CBC300D20F6B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2539298B1629CBC300D20F6B /* Default-568h@2x.png */; };
 		2539298F1629CBC300D20F6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2539298D1629CBC300D20F6B /* MainStoryboard.storyboard */; };
 		253929921629CBC300D20F6B /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253929911629CBC300D20F6B /* ITViewController.m */; };
+		2539299F1629EA2200D20F6B /* UIViewController+InformaticToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2539299E1629EA2200D20F6B /* UIViewController+InformaticToolbar.m */; };
+		253929A21629F24B00D20F6B /* ITBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 253929A11629F24B00D20F6B /* ITBarItemSet.m */; };
+		25E58A97162A027C00A6012E /* ITProgressBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,12 @@
 		2539298E1629CBC300D20F6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		253929901629CBC300D20F6B /* ITViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITViewController.h; sourceTree = "<group>"; };
 		253929911629CBC300D20F6B /* ITViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITViewController.m; sourceTree = "<group>"; };
+		2539299D1629EA2200D20F6B /* UIViewController+InformaticToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+InformaticToolbar.h"; sourceTree = "<group>"; };
+		2539299E1629EA2200D20F6B /* UIViewController+InformaticToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+InformaticToolbar.m"; sourceTree = "<group>"; };
+		253929A01629F24B00D20F6B /* ITBarItemSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITBarItemSet.h; sourceTree = "<group>"; };
+		253929A11629F24B00D20F6B /* ITBarItemSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITBarItemSet.m; sourceTree = "<group>"; };
+		25E58A95162A027C00A6012E /* ITProgressBarItemSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITProgressBarItemSet.h; sourceTree = "<group>"; };
+		25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITProgressBarItemSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +92,7 @@
 		2539297B1629CBC300D20F6B /* InformaticToolbar */ = {
 			isa = PBXGroup;
 			children = (
+				253929991629D0B000D20F6B /* InformaticToolbar */,
 				253929841629CBC300D20F6B /* ITAppDelegate.h */,
 				253929851629CBC300D20F6B /* ITAppDelegate.m */,
 				2539298D1629CBC300D20F6B /* MainStoryboard.storyboard */,
@@ -105,6 +115,19 @@
 				2539298B1629CBC300D20F6B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		253929991629D0B000D20F6B /* InformaticToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				2539299D1629EA2200D20F6B /* UIViewController+InformaticToolbar.h */,
+				2539299E1629EA2200D20F6B /* UIViewController+InformaticToolbar.m */,
+				253929A01629F24B00D20F6B /* ITBarItemSet.h */,
+				253929A11629F24B00D20F6B /* ITBarItemSet.m */,
+				25E58A95162A027C00A6012E /* ITProgressBarItemSet.h */,
+				25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */,
+			);
+			path = InformaticToolbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +200,9 @@
 				253929821629CBC300D20F6B /* main.m in Sources */,
 				253929861629CBC300D20F6B /* ITAppDelegate.m in Sources */,
 				253929921629CBC300D20F6B /* ITViewController.m in Sources */,
+				2539299F1629EA2200D20F6B /* UIViewController+InformaticToolbar.m in Sources */,
+				253929A21629F24B00D20F6B /* ITBarItemSet.m in Sources */,
+				25E58A97162A027C00A6012E /* ITProgressBarItemSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +250,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -245,7 +271,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -293,6 +319,7 @@
 				253929971629CBC300D20F6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
