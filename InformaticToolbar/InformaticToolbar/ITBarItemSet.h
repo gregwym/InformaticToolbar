@@ -8,10 +8,11 @@
 
 @interface ITBarItemSet : NSObject
 
-@property (nonatomic, strong, readonly) NSArray *barButtonItems;
+@property (nonatomic, strong, readonly) NSArray *barItems;
 @property (nonatomic, weak) id dismissTarget;
 @property (nonatomic) SEL dismissAction;
 
-- (ITBarItemSet *)initWithItems:(NSArray *)barButtonItems;
+- (ITBarItemSet *)initWithItems:(NSArray *)barItems;
+- (IBAction)dismiss:(id)sender;
 
 @end
