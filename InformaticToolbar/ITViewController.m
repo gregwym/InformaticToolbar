@@ -43,7 +43,7 @@
 
 - (IBAction)addProgressBarItemSet:(id)sender
 {
-	ITProgressBarItemSet *progressBarItemSet = [ITProgressBarItemSet progressBarItemSetWithTitle:@"Downloading new schedule" dismissTarget:self andAction:@selector(dismissBarItemSet:)];
+	ITProgressBarItemSet *progressBarItemSet = [ITProgressBarItemSet progressBarItemSetWithTitle:@"Downloading Data" dismissTarget:self andAction:@selector(dismissBarItemSet:)];
 	[self pushBarItemSet:progressBarItemSet animated:YES];
 	
 	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);

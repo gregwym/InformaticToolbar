@@ -22,8 +22,8 @@
 
 - (ITProgressBarItemSet *)init
 {
-	CGFloat progressWidth = /* haveCancel ? 180.0 : */ 200.0;
-	UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 2.0, progressWidth, 20.0)];
+	CGFloat progressWidth = 200.0;
+	UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 2.0, progressWidth, 16.0)];
 	titleLabel.textAlignment = NSTextAlignmentCenter;
 	titleLabel.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
 	titleLabel.backgroundColor = [UIColor clearColor];
@@ -31,9 +31,9 @@
 	titleLabel.shadowColor = [UIColor darkGrayColor];
 	
 	UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
-	progressView.frame = CGRectMake(0.0, 25.0, progressWidth, 12.0);
+	progressView.frame = CGRectMake(0.0, 20.0, progressWidth, 12.0);
 	
-	UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 200.0, 40.0)];
+	UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, progressWidth, 32.0)];
 	[view addSubview:titleLabel];
 	[view addSubview:progressView];
 	
