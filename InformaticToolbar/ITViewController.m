@@ -30,7 +30,7 @@
 {
 	[super viewDidAppear:animated];
 	
-	self.updateProgressTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(increaseProgress) userInfo:nil repeats:YES];
+	self.updateProgressTimer = [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(increaseProgress) userInfo:nil repeats:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +54,7 @@
 {
 	for (ITProgressBarItemSet *barItemSet in self.barItemSets) {
 		if ([barItemSet isKindOfClass:[ITProgressBarItemSet class]]) {
-			float progress = barItemSet.progress == 0.99 ? 0.0 : barItemSet.progress + 0.01;
+			float progress = barItemSet.progress > 0.99 ? 0.0 : barItemSet.progress + 0.1;
 			[barItemSet setProgress:progress animated:YES];
 		}
 	}
