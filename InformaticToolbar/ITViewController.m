@@ -7,9 +7,7 @@
 //
 
 #import "ITViewController.h"
-#import "UIViewController+InformaticToolbar.h"
-#import "ITLabelBarItemSet.h"
-#import "ITProgressBarItemSet.h"
+#import "InformaticToolbar.h"
 
 @interface ITViewController ()
 

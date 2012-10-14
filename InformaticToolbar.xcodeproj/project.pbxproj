@@ -18,14 +18,39 @@
 		2539298C1629CBC300D20F6B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2539298B1629CBC300D20F6B /* Default-568h@2x.png */; };
 		2539298F1629CBC300D20F6B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2539298D1629CBC300D20F6B /* MainStoryboard.storyboard */; };
 		253929921629CBC300D20F6B /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253929911629CBC300D20F6B /* ITViewController.m */; };
-		2539299F1629EA2200D20F6B /* UIViewController+InformaticToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2539299E1629EA2200D20F6B /* UIViewController+InformaticToolbar.m */; };
-		253929A21629F24B00D20F6B /* ITBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 253929A11629F24B00D20F6B /* ITBarItemSet.m */; };
-		258F9D3D162A837200C7B824 /* ITLabelBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 258F9D3C162A837200C7B824 /* ITLabelBarItemSet.m */; };
-		25E58A97162A027C00A6012E /* ITProgressBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */; };
+		258F9D5F162A8C6C00C7B824 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253929771629CBC300D20F6B /* Foundation.framework */; };
+		258F9D6B162A8D2000C7B824 /* UIViewController+InformaticToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2539299E1629EA2200D20F6B /* UIViewController+InformaticToolbar.m */; };
+		258F9D6C162A8D2500C7B824 /* ITBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 253929A11629F24B00D20F6B /* ITBarItemSet.m */; };
+		258F9D6D162A8D2900C7B824 /* ITLabelBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 258F9D3C162A837200C7B824 /* ITLabelBarItemSet.m */; };
+		258F9D6E162A8D2C00C7B824 /* ITProgressBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */; };
+		258F9D6F162A8D3E00C7B824 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253929751629CBC300D20F6B /* UIKit.framework */; };
+		258F9D70162A8D7800C7B824 /* libInformaticToolbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 258F9D5E162A8C6C00C7B824 /* libInformaticToolbar.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		258F9D71162A8D8B00C7B824 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 253929681629CBC200D20F6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 258F9D5D162A8C6C00C7B824;
+			remoteInfo = InformaticToolbar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		258F9D5C162A8C6C00C7B824 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		253929711629CBC300D20F6B /* InformaticToolbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InformaticToolbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		253929711629CBC300D20F6B /* InformaticToolbarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InformaticToolbarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253929751629CBC300D20F6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		253929771629CBC300D20F6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		253929791629CBC300D20F6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +73,7 @@
 		258F9D3B162A837200C7B824 /* ITLabelBarItemSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITLabelBarItemSet.h; sourceTree = "<group>"; };
 		258F9D3C162A837200C7B824 /* ITLabelBarItemSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITLabelBarItemSet.m; sourceTree = "<group>"; };
 		258F9D40162A8AE600C7B824 /* InformaticToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformaticToolbar.h; sourceTree = "<group>"; };
+		258F9D5E162A8C6C00C7B824 /* libInformaticToolbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInformaticToolbar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E58A95162A027C00A6012E /* ITProgressBarItemSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITProgressBarItemSet.h; sourceTree = "<group>"; };
 		25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITProgressBarItemSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,9 +83,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258F9D70162A8D7800C7B824 /* libInformaticToolbar.a in Frameworks */,
 				253929761629CBC300D20F6B /* UIKit.framework in Frameworks */,
 				253929781629CBC300D20F6B /* Foundation.framework in Frameworks */,
 				2539297A1629CBC300D20F6B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		258F9D5B162A8C6C00C7B824 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				258F9D6F162A8D3E00C7B824 /* UIKit.framework in Frameworks */,
+				258F9D5F162A8C6C00C7B824 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +114,8 @@
 		253929721629CBC300D20F6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				253929711629CBC300D20F6B /* InformaticToolbar.app */,
+				253929711629CBC300D20F6B /* InformaticToolbarDemo.app */,
+				258F9D5E162A8C6C00C7B824 /* libInformaticToolbar.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,9 +185,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		253929701629CBC200D20F6B /* InformaticToolbar */ = {
+		253929701629CBC200D20F6B /* InformaticToolbarDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 253929951629CBC300D20F6B /* Build configuration list for PBXNativeTarget "InformaticToolbar" */;
+			buildConfigurationList = 253929951629CBC300D20F6B /* Build configuration list for PBXNativeTarget "InformaticToolbarDemo" */;
 			buildPhases = (
 				2539296D1629CBC200D20F6B /* Sources */,
 				2539296E1629CBC200D20F6B /* Frameworks */,
@@ -159,11 +196,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				258F9D72162A8D8B00C7B824 /* PBXTargetDependency */,
+			);
+			name = InformaticToolbarDemo;
+			productName = InformaticToolbar;
+			productReference = 253929711629CBC300D20F6B /* InformaticToolbarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		258F9D5D162A8C6C00C7B824 /* InformaticToolbar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 258F9D69162A8C6C00C7B824 /* Build configuration list for PBXNativeTarget "InformaticToolbar" */;
+			buildPhases = (
+				258F9D5A162A8C6C00C7B824 /* Sources */,
+				258F9D5B162A8C6C00C7B824 /* Frameworks */,
+				258F9D5C162A8C6C00C7B824 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
 			);
 			name = InformaticToolbar;
 			productName = InformaticToolbar;
-			productReference = 253929711629CBC300D20F6B /* InformaticToolbar.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 258F9D5E162A8C6C00C7B824 /* libInformaticToolbar.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -187,7 +242,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				253929701629CBC200D20F6B /* InformaticToolbar */,
+				253929701629CBC200D20F6B /* InformaticToolbarDemo */,
+				258F9D5D162A8C6C00C7B824 /* InformaticToolbar */,
 			);
 		};
 /* End PBXProject section */
@@ -215,14 +271,29 @@
 				253929821629CBC300D20F6B /* main.m in Sources */,
 				253929861629CBC300D20F6B /* ITAppDelegate.m in Sources */,
 				253929921629CBC300D20F6B /* ITViewController.m in Sources */,
-				2539299F1629EA2200D20F6B /* UIViewController+InformaticToolbar.m in Sources */,
-				253929A21629F24B00D20F6B /* ITBarItemSet.m in Sources */,
-				25E58A97162A027C00A6012E /* ITProgressBarItemSet.m in Sources */,
-				258F9D3D162A837200C7B824 /* ITLabelBarItemSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		258F9D5A162A8C6C00C7B824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				258F9D6B162A8D2000C7B824 /* UIViewController+InformaticToolbar.m in Sources */,
+				258F9D6C162A8D2500C7B824 /* ITBarItemSet.m in Sources */,
+				258F9D6D162A8D2900C7B824 /* ITLabelBarItemSet.m in Sources */,
+				258F9D6E162A8D2C00C7B824 /* ITProgressBarItemSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		258F9D72162A8D8B00C7B824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 258F9D5D162A8C6C00C7B824 /* InformaticToolbar */;
+			targetProxy = 258F9D71162A8D8B00C7B824 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2539297E1629CBC300D20F6B /* InfoPlist.strings */ = {
@@ -297,10 +368,13 @@
 		253929961629CBC300D20F6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InformaticToolbar/InformaticToolbar-Prefix.pch";
 				INFOPLIST_FILE = "InformaticToolbar/InformaticToolbar-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/InformaticToolbar/\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -308,11 +382,43 @@
 		253929971629CBC300D20F6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InformaticToolbar/InformaticToolbar-Prefix.pch";
 				INFOPLIST_FILE = "InformaticToolbar/InformaticToolbar-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/InformaticToolbar/\"/**";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		258F9D67162A8C6C00C7B824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/InformaticToolbar.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InformaticToolbar/InformaticToolbar-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		258F9D68162A8C6C00C7B824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/InformaticToolbar.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InformaticToolbar/InformaticToolbar-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -328,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		253929951629CBC300D20F6B /* Build configuration list for PBXNativeTarget "InformaticToolbar" */ = {
+		253929951629CBC300D20F6B /* Build configuration list for PBXNativeTarget "InformaticToolbarDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				253929961629CBC300D20F6B /* Debug */,
@@ -336,6 +442,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		258F9D69162A8C6C00C7B824 /* Build configuration list for PBXNativeTarget "InformaticToolbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				258F9D67162A8C6C00C7B824 /* Debug */,
+				258F9D68162A8C6C00C7B824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
