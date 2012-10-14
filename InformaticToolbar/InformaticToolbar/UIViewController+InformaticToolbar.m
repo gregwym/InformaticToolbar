@@ -42,6 +42,7 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 
 - (void)setVisibleBarItemSet:(ITBarItemSet *)visibleBarItemSet animated:(BOOL)animated
 {
+	// If is not in the array, stop
 	if (visibleBarItemSet != nil && ![self.barItemSets containsObject:visibleBarItemSet]) {
 		return;
 	}
@@ -49,6 +50,7 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 	// deassociate old object
 	objc_setAssociatedObject(self, (__bridge const void *)(ITVisibleBarItemSet), nil, OBJC_ASSOCIATION_ASSIGN);
 	
+	// If is nil, hide everything
 	if (visibleBarItemSet == nil) {
 		[self.navigationController setToolbarHidden:YES animated:animated];
 		[self setToolbarItems:@[] animated:animated];
@@ -65,6 +67,7 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 		[toolbarItems addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:visibleBarItemSet action:@selector(dismiss:)]];
 	}
 	
+	// If there are more than one set, show the switch button
 	if ([self.barItemSets count] > 1) {
 //		NSUInteger index = [self.barItemSets indexOfObject:visibleBarItemSet];
 		UIBarButtonItem *indexButton = [[UIBarButtonItem alloc] initWithTitle:[NSString stringWithFormat:@"➲"/*, index + 1*/] style:UIBarButtonItemStylePlain target:self action:@selector(showNextBarItemSet)];
@@ -102,6 +105,9 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 - (void)appendBarItemSet:(ITBarItemSet *)barItemSet
 {
 	[[self getBarItemSets] addObject:barItemSet];
+	if ([self.barItemSets count] > 1) {
+		[self setVisibleBarItemSet:self.visibleBarItemSet animated:YES];
+	}
 }
 
 - (void)removeBarItemSet:(ITBarItemSet *)barItemSet animated:(BOOL)animated
@@ -114,6 +120,9 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 		barItemSet = count == 0 ? nil : index >= count ? [self.barItemSets objectAtIndex:index - 1] : [self.barItemSets objectAtIndex:index];
 		
 		[self setVisibleBarItemSet:barItemSet animated:animated];
+	}
+	else if ([self.barItemSets count] == 1) {
+		[self setVisibleBarItemSet:self.visibleBarItemSet animated:YES];
 	}
 }
 
