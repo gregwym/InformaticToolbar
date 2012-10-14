@@ -10,10 +10,13 @@
 
 @interface UIViewController (InformaticToolbar)
 
-- (void)pushBarButtonItemSet:(ITBarItemSet *)barButtonItemSet animated:(BOOL)animated;
-- (void)appendBarButtonItemSet:(ITBarItemSet *)barButtonItemSet;
+@property (nonatomic, strong, readonly) NSArray *barItemSets;
+@property (nonatomic, weak, readonly) ITBarItemSet *visibleBarItemSet;
 
-- (void)removeBarButtonItemSet:(ITBarItemSet *)barButtonItemSet animated:(BOOL)animated;
-- (void)removeAllBarButtonItemSetsAnimated:(BOOL)animated;
+- (void)pushBarItemSet:(ITBarItemSet *)barItemSet animated:(BOOL)animated;
+- (void)appendBarItemSet:(ITBarItemSet *)barItemSet;
+
+- (void)removeBarItemSet:(ITBarItemSet *)barItemSet animated:(BOOL)animated;
+- (void)removeAllBarItemSetsAnimated:(BOOL)animated;
 
 @end

@@ -28,14 +28,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	[self.navigationController setToolbarHidden:NO animated:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
-	self.progressBarItemSet = [ITProgressBarItemSet progressBarItemSetWithTitle:@"Downloading new schedule" dismissTarget:self andAction:@selector(didTapCancelButton)];
-	[self pushBarButtonItemSet:self.progressBarItemSet animated:YES];
+	
+	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);
+	NSLog(@"Bar Item Sets: %@", self.barItemSets);
+	
+	self.progressBarItemSet = [ITProgressBarItemSet progressBarItemSetWithTitle:@"Downloading new schedule" dismissTarget:self andAction:@selector(dismissBarItemSet:)];
+	[self pushBarItemSet:self.progressBarItemSet animated:YES];
+	
+	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);
+	NSLog(@"Bar Item Sets: %@", self.barItemSets);
 	
 	self.progress = 0;
 	self.updateProgressTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(increaseProgress) userInfo:nil repeats:YES];
@@ -53,9 +59,10 @@
 	[self.progressBarItemSet setProgress:self.progress / 100.0  animated:YES];
 }
 
-- (void)didTapCancelButton
+- (void)dismissBarItemSet:(ITBarItemSet *)sender
 {
-	NSLog(@"Did tap cancel button");
+	NSLog(@"Did tap dismiss button %@", sender);
+	[self removeBarItemSet:sender animated:YES];
 }
 
 @end
