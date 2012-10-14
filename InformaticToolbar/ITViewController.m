@@ -59,6 +59,17 @@
 	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);
 	NSLog(@"Bar Item Sets: %@", self.barItemSets);
 }
+
+- (IBAction)addConfirmationBarItemSet:(id)sender
+{
+	ITConfirmationBarItemSet *confirmationBarItemSet = [ITConfirmationBarItemSet confirmationBarItemSetWithTarget:self andConfirmAction:@selector(confirmBarItemSet:) andDismissAction:@selector(dismissBarItemSet:)];
+	confirmationBarItemSet.textLabel.text = @"Do you want to continue? ";
+	confirmationBarItemSet.detailTextLabel.text = @"Tap on the check mark to confirm. ";
+	[self pushBarItemSet:confirmationBarItemSet animated:YES];
+	
+	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);
+	NSLog(@"Bar Item Sets: %@", self.barItemSets);
+}
 								
 - (void)increaseProgress
 {
@@ -74,6 +85,13 @@
 {
 	NSLog(@"Did tap dismiss button %@", sender);
 	[self removeBarItemSet:sender animated:YES];
+}
+
+- (void)confirmBarItemSet:(ITBarItemSet *)sender
+{
+	NSLog(@"Did tap confirm button %@", sender);
+	[self removeBarItemSet:sender animated:YES];
+	[self addProgressBarItemSet:self];
 }
 
 @end

@@ -10,5 +10,6 @@
 
 - (IBAction)addLabelBarItemSet:(id)sender;
 - (IBAction)addProgressBarItemSet:(id)sender;
+- (IBAction)addConfirmationBarItemSet:(id)sender;
 
 @end

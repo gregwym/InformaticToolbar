@@ -13,5 +13,6 @@
 #import "ITBarItemSet.h"
 #import "ITLabelBarItemSet.h"
 #import "ITProgressBarItemSet.h"
+#import "ITConfirmationBarItemSet.h"
 
 #endif
