@@ -10,4 +10,6 @@
 
 @interface ITViewController : UIViewController
 
+- (IBAction)addProgressBarItemSet:(id)sender;
+
 @end

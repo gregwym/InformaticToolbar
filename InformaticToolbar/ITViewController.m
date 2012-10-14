@@ -12,17 +12,13 @@
 
 @interface ITViewController ()
 
-@property (nonatomic) NSUInteger progress;
 @property (nonatomic, strong) NSTimer *updateProgressTimer;
-@property (nonatomic, strong) ITProgressBarItemSet *progressBarItemSet;
 
 @end
 
 @implementation ITViewController
 
-@synthesize progress = _progress;
 @synthesize updateProgressTimer = _updateProgressTimer;
-@synthesize progressBarItemSet = _progressBarItemSet;
 
 - (void)viewDidLoad
 {
@@ -34,16 +30,6 @@
 {
 	[super viewDidAppear:animated];
 	
-	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);
-	NSLog(@"Bar Item Sets: %@", self.barItemSets);
-	
-	self.progressBarItemSet = [ITProgressBarItemSet progressBarItemSetWithTitle:@"Downloading new schedule" dismissTarget:self andAction:@selector(dismissBarItemSet:)];
-	[self pushBarItemSet:self.progressBarItemSet animated:YES];
-	
-	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);
-	NSLog(@"Bar Item Sets: %@", self.barItemSets);
-	
-	self.progress = 0;
 	self.updateProgressTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(increaseProgress) userInfo:nil repeats:YES];
 }
 
@@ -52,11 +38,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - actions
+
+- (IBAction)addProgressBarItemSet:(id)sender
+{
+	ITProgressBarItemSet *progressBarItemSet = [ITProgressBarItemSet progressBarItemSetWithTitle:@"Downloading new schedule" dismissTarget:self andAction:@selector(dismissBarItemSet:)];
+	[self pushBarItemSet:progressBarItemSet animated:YES];
+	
+	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);
+	NSLog(@"Bar Item Sets: %@", self.barItemSets);
+}
 								
 - (void)increaseProgress
 {
-	self.progress = (self.progress + 1) % 100;
-	[self.progressBarItemSet setProgress:self.progress / 100.0  animated:YES];
+	for (ITProgressBarItemSet *barItemSet in self.barItemSets) {
+		if ([barItemSet isKindOfClass:[ITProgressBarItemSet class]]) {
+			float progress = barItemSet.progress == 0.99 ? 0.0 : barItemSet.progress + 0.01;
+			[barItemSet setProgress:progress animated:YES];
+		}
+	}
 }
 
 - (void)dismissBarItemSet:(ITBarItemSet *)sender
