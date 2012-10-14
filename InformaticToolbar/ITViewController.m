@@ -8,6 +8,7 @@
 
 #import "ITViewController.h"
 #import "UIViewController+InformaticToolbar.h"
+#import "ITLabelBarItemSet.h"
 #import "ITProgressBarItemSet.h"
 
 @interface ITViewController ()
@@ -41,9 +42,20 @@
 
 #pragma mark - actions
 
+- (IBAction)addLabelBarItemSet:(id)sender
+{
+	ITLabelBarItemSet *labelBarItemSet = [ITLabelBarItemSet labelBarItemSetWithDismissTarget:self andAction:@selector(dismissBarItemSet:)];
+	labelBarItemSet.textLabel.text = @"This is text label. ";
+	labelBarItemSet.detailTextLabel.text = @"This is detail text label. ";
+	[self pushBarItemSet:labelBarItemSet animated:YES];
+	
+	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);
+	NSLog(@"Bar Item Sets: %@", self.barItemSets);
+}
+
 - (IBAction)addProgressBarItemSet:(id)sender
 {
-	ITProgressBarItemSet *progressBarItemSet = [ITProgressBarItemSet progressBarItemSetWithTitle:@"Downloading Data" dismissTarget:self andAction:@selector(dismissBarItemSet:)];
+	ITProgressBarItemSet *progressBarItemSet = [ITProgressBarItemSet progressBarItemSetWithTitle:@"This is progress title. " dismissTarget:self andAction:@selector(dismissBarItemSet:)];
 	[self pushBarItemSet:progressBarItemSet animated:YES];
 	
 	NSLog(@"Visible Bar Item Set: %@", self.visibleBarItemSet);

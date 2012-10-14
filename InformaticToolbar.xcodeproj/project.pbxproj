@@ -135,10 +135,10 @@
 			children = (
 				253929A01629F24B00D20F6B /* ITBarItemSet.h */,
 				253929A11629F24B00D20F6B /* ITBarItemSet.m */,
-				25E58A95162A027C00A6012E /* ITProgressBarItemSet.h */,
-				25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */,
 				258F9D3B162A837200C7B824 /* ITLabelBarItemSet.h */,
 				258F9D3C162A837200C7B824 /* ITLabelBarItemSet.m */,
+				25E58A95162A027C00A6012E /* ITProgressBarItemSet.h */,
+				25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */,
 			);
 			name = BarItemSets;
 			sourceTree = "<group>";

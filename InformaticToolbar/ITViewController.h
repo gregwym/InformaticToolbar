@@ -6,10 +6,9 @@
 //  Copyright (c) 2012年 Greg Wang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface ITViewController : UIViewController
 
+- (IBAction)addLabelBarItemSet:(id)sender;
 - (IBAction)addProgressBarItemSet:(id)sender;
 
 @end
