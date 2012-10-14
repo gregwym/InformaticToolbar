@@ -67,6 +67,11 @@
 	return progressBarItemSet;
 }
 
+- (float)progress
+{
+	return [self.progressView progress];
+}
+
 - (void)setProgress:(float)progress animated:(BOOL)animated
 {
 	[self.progressView setProgress:progress animated:animated];

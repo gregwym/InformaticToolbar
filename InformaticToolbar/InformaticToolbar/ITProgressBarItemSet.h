@@ -13,6 +13,7 @@
 + (ITProgressBarItemSet *)progressBarItemSetWithTitle:(NSString *)title;
 + (ITProgressBarItemSet *)progressBarItemSetWithTitle:(NSString *)title dismissTarget:(id)target andAction:(SEL)action;
 
+- (float)progress;
 - (void)setProgress:(float)progress animated:(BOOL)animated;
 
 @end
