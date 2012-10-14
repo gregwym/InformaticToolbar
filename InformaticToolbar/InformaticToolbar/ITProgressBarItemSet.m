@@ -49,10 +49,7 @@
 
 + (ITProgressBarItemSet *)progressBarItemSetWithTitle:(NSString *)title
 {
-	ITProgressBarItemSet *progressBarItemSet = [[ITProgressBarItemSet alloc] init];
-	if (progressBarItemSet != nil) {
-		progressBarItemSet.titleLabel.text = title;
-	}
+	ITProgressBarItemSet *progressBarItemSet = [ITProgressBarItemSet progressBarItemSetWithTitle:title dismissTarget:nil andAction:nil];
 	return progressBarItemSet;
 }
 
