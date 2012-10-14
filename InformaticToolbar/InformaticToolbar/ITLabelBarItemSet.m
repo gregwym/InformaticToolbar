@@ -20,9 +20,9 @@
 @synthesize textLabel = _textLabel;
 @synthesize detailTextLabel = _detailTextLabel;
 
-- (ITLabelBarItemSet *)init
+- (ITLabelBarItemSet *)initWithItems:(NSArray *)barItems;
 {
-	CGFloat labelWidth = 240.0;
+	CGFloat labelWidth = barItems == nil ? 240.0 : 216.0;
 	UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 2.0, labelWidth, 16.0)];
 	textLabel.textAlignment = NSTextAlignmentCenter;
 	textLabel.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
@@ -43,6 +43,10 @@
 	
 	NSArray *items = [NSArray arrayWithObject:[[UIBarButtonItem alloc] initWithCustomView:view]];
 	
+	if (barItems != nil) {
+		items = [items arrayByAddingObjectsFromArray:barItems];
+	}
+	
 	self = [super initWithItems:items];
 	if (self != nil) {
 		self.textLabel = textLabel;
@@ -53,16 +57,13 @@
 
 + (ITLabelBarItemSet *)labelBarItemSet
 {
-	ITLabelBarItemSet *labelBarItemSet = [[self alloc] init];
-	if (labelBarItemSet != nil) {
-		
-	}
+	ITLabelBarItemSet *labelBarItemSet = [ITLabelBarItemSet labelBarItemSetWithDismissTarget:nil andAction:nil];
 	return labelBarItemSet;
 }
 
 + (ITLabelBarItemSet *)labelBarItemSetWithDismissTarget:(id)target andAction:(SEL)action
 {
-	ITLabelBarItemSet *labelBarItemSet = [[self alloc] init];
+	ITLabelBarItemSet *labelBarItemSet = [[self alloc] initWithItems:nil];
 	if (labelBarItemSet != nil) {
 		labelBarItemSet.dismissTarget = target;
 		labelBarItemSet.dismissAction = action;

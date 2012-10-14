@@ -13,6 +13,7 @@
 @property (nonatomic, strong, readonly) UILabel *textLabel;
 @property (nonatomic, strong, readonly) UILabel *detailTextLabel;
 
+- (ITLabelBarItemSet *)initWithItems:(NSArray *)barItems;
 + (ITLabelBarItemSet *)labelBarItemSet;
 + (ITLabelBarItemSet *)labelBarItemSetWithDismissTarget:(id)target andAction:(SEL)action;
 
