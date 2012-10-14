@@ -25,6 +25,8 @@
 	self = [super init];
 	if (self != nil) {
 		self.barItems = barItems;
+		self.dismissTarget = nil;
+		self.dismissAction = nil;
 	}
 	return self;
 }
