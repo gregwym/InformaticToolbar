@@ -20,6 +20,7 @@
 		253929921629CBC300D20F6B /* ITViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253929911629CBC300D20F6B /* ITViewController.m */; };
 		2539299F1629EA2200D20F6B /* UIViewController+InformaticToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2539299E1629EA2200D20F6B /* UIViewController+InformaticToolbar.m */; };
 		253929A21629F24B00D20F6B /* ITBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 253929A11629F24B00D20F6B /* ITBarItemSet.m */; };
+		258F9D3D162A837200C7B824 /* ITLabelBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 258F9D3C162A837200C7B824 /* ITLabelBarItemSet.m */; };
 		25E58A97162A027C00A6012E /* ITProgressBarItemSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		2539299E1629EA2200D20F6B /* UIViewController+InformaticToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+InformaticToolbar.m"; sourceTree = "<group>"; };
 		253929A01629F24B00D20F6B /* ITBarItemSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITBarItemSet.h; sourceTree = "<group>"; };
 		253929A11629F24B00D20F6B /* ITBarItemSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITBarItemSet.m; sourceTree = "<group>"; };
+		258F9D3B162A837200C7B824 /* ITLabelBarItemSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITLabelBarItemSet.h; sourceTree = "<group>"; };
+		258F9D3C162A837200C7B824 /* ITLabelBarItemSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITLabelBarItemSet.m; sourceTree = "<group>"; };
 		25E58A95162A027C00A6012E /* ITProgressBarItemSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITProgressBarItemSet.h; sourceTree = "<group>"; };
 		25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITProgressBarItemSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,12 +125,22 @@
 			children = (
 				2539299D1629EA2200D20F6B /* UIViewController+InformaticToolbar.h */,
 				2539299E1629EA2200D20F6B /* UIViewController+InformaticToolbar.m */,
+				258F9D3F162A837A00C7B824 /* BarItemSets */,
+			);
+			path = InformaticToolbar;
+			sourceTree = "<group>";
+		};
+		258F9D3F162A837A00C7B824 /* BarItemSets */ = {
+			isa = PBXGroup;
+			children = (
 				253929A01629F24B00D20F6B /* ITBarItemSet.h */,
 				253929A11629F24B00D20F6B /* ITBarItemSet.m */,
 				25E58A95162A027C00A6012E /* ITProgressBarItemSet.h */,
 				25E58A96162A027C00A6012E /* ITProgressBarItemSet.m */,
+				258F9D3B162A837200C7B824 /* ITLabelBarItemSet.h */,
+				258F9D3C162A837200C7B824 /* ITLabelBarItemSet.m */,
 			);
-			path = InformaticToolbar;
+			name = BarItemSets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +216,7 @@
 				2539299F1629EA2200D20F6B /* UIViewController+InformaticToolbar.m in Sources */,
 				253929A21629F24B00D20F6B /* ITBarItemSet.m in Sources */,
 				25E58A97162A027C00A6012E /* ITProgressBarItemSet.m in Sources */,
+				258F9D3D162A837200C7B824 /* ITLabelBarItemSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
