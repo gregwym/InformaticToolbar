@@ -42,6 +42,10 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 
 - (void)setVisibleBarItemSet:(ITBarItemSet *)visibleBarItemSet animated:(BOOL)animated
 {
+	if (visibleBarItemSet != nil && ![self.barItemSets containsObject:visibleBarItemSet]) {
+		return;
+	}
+	
 	// deassociate old object
 	objc_setAssociatedObject(self, (__bridge const void *)(ITVisibleBarItemSet), nil, OBJC_ASSOCIATION_ASSIGN);
 	
@@ -61,6 +65,13 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 		[toolbarItems addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:visibleBarItemSet action:@selector(dismiss:)]];
 	}
 	
+	if ([self.barItemSets count] > 1) {
+//		NSUInteger index = [self.barItemSets indexOfObject:visibleBarItemSet];
+		UIBarButtonItem *indexButton = [[UIBarButtonItem alloc] initWithTitle:[NSString stringWithFormat:@"➲"/*, index + 1*/] style:UIBarButtonItemStylePlain target:self action:@selector(showNextBarItemSet)];
+		[indexButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:28.0] forKey:UITextAttributeFont] forState:UIControlStateNormal];
+		[toolbarItems insertObject:indexButton atIndex:0];
+	}
+	
 	// Associate the object
 	objc_setAssociatedObject(self, (__bridge const void *)(ITVisibleBarItemSet), visibleBarItemSet, OBJC_ASSOCIATION_ASSIGN);
 	
@@ -70,6 +81,13 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 }
 
 #pragma mark - methods
+
+- (void)showNextBarItemSet
+{
+	NSUInteger index = [self.barItemSets indexOfObject:self.visibleBarItemSet];
+	index = (index + 1) % [self.barItemSets count];
+	[self setVisibleBarItemSet:[self.barItemSets objectAtIndex:index] animated:YES];
+}
 
 - (void)pushBarItemSet:(ITBarItemSet *)barItemSet animated:(BOOL)animated;
 {
