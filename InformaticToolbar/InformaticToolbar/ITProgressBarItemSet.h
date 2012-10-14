@@ -10,6 +10,8 @@
 
 @interface ITProgressBarItemSet : ITBarItemSet
 
+@property (nonatomic, strong, readonly) UILabel *titleLabel;
+
 + (ITProgressBarItemSet *)progressBarItemSetWithTitle:(NSString *)title;
 + (ITProgressBarItemSet *)progressBarItemSetWithTitle:(NSString *)title dismissTarget:(id)target andAction:(SEL)action;
 
