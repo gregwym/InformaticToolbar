@@ -52,9 +52,7 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 	
 	// If is nil, hide everything
 	if (visibleBarItemSet == nil) {
-		if (self.navigationController.topViewController == self) {
-			[self.navigationController setToolbarHidden:YES animated:animated];
-		}
+		[self updateToolbarToLatestStateAnimated:animated];
 		[self setToolbarItems:@[] animated:animated];
 		return;
 	}
@@ -82,10 +80,8 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 	objc_setAssociatedObject(self, (__bridge const void *)(ITVisibleBarItemSet), visibleBarItemSet, OBJC_ASSOCIATION_ASSIGN);
 	
 	// Present the toolbar and items
-	if (self.navigationController.topViewController == self) {
-		[self.navigationController setToolbarHidden:NO animated:animated];
-	}
 	[self setToolbarItems:toolbarItems animated:animated];
+	[self updateToolbarToLatestStateAnimated:animated];
 }
 
 #pragma mark - methods
@@ -95,6 +91,13 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 	NSUInteger index = [self.barItemSets indexOfObject:self.visibleBarItemSet];
 	index = (index + 1) % [self.barItemSets count];
 	[self setVisibleBarItemSet:[self.barItemSets objectAtIndex:index] animated:YES];
+}
+
+- (void)updateToolbarToLatestStateAnimated:(BOOL)animated
+{
+	if (self.navigationController.topViewController == self) {
+		[self.navigationController setToolbarHidden:self.visibleBarItemSet == nil animated:animated];
+	}
 }
 
 - (void)pushBarItemSet:(ITBarItemSet *)barItemSet animated:(BOOL)animated;

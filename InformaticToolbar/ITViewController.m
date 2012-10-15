@@ -28,6 +28,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
+	[self updateToolbarToLatestStateAnimated:animated];
 	
 	self.updateProgressTimer = [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(increaseProgress) userInfo:nil repeats:YES];
 }

@@ -13,6 +13,11 @@
 @property (nonatomic, strong, readonly) NSArray *barItemSets;
 @property (nonatomic, weak, readonly) ITBarItemSet *visibleBarItemSet;
 
+/* 
+ * Call this method in viewDidAppear: to update toolbar's appearance to the latest state
+ */
+- (void)updateToolbarToLatestStateAnimated:(BOOL)animated;
+
 - (void)pushBarItemSet:(ITBarItemSet *)barItemSet animated:(BOOL)animated;
 - (void)appendBarItemSet:(ITBarItemSet *)barItemSet;
 
