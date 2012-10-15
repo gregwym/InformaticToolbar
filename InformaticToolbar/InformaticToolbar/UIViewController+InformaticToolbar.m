@@ -52,7 +52,9 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 	
 	// If is nil, hide everything
 	if (visibleBarItemSet == nil) {
-		[self.navigationController setToolbarHidden:YES animated:animated];
+		if (self.navigationController.topViewController == self) {
+			[self.navigationController setToolbarHidden:YES animated:animated];
+		}
 		[self setToolbarItems:@[] animated:animated];
 		return;
 	}
@@ -80,7 +82,9 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 	objc_setAssociatedObject(self, (__bridge const void *)(ITVisibleBarItemSet), visibleBarItemSet, OBJC_ASSOCIATION_ASSIGN);
 	
 	// Present the toolbar and items
-	[self.navigationController setToolbarHidden:NO animated:animated];
+	if (self.navigationController.topViewController == self) {
+		[self.navigationController setToolbarHidden:NO animated:animated];
+	}
 	[self setToolbarItems:toolbarItems animated:animated];
 }
 
