@@ -41,7 +41,7 @@
 	[view addSubview:textLabel];
 	[view addSubview:detailTextLabel];
 	
-	NSArray *items = [NSArray arrayWithObject:[[UIBarButtonItem alloc] initWithCustomView:view]];
+	NSArray *items = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil], [[UIBarButtonItem alloc] initWithCustomView:view], [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
 	
 	if (barItems != nil) {
 		items = [items arrayByAddingObjectsFromArray:barItems];

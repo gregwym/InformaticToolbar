@@ -59,8 +59,8 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 	
 	// Construct the toolbar
 	NSMutableArray *toolbarItems = [visibleBarItemSet.barItems mutableCopy];
-	[toolbarItems insertObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] atIndex:0];
-	[toolbarItems addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+//	[toolbarItems insertObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] atIndex:0];
+//	[toolbarItems addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
 	
 	// If is dismissable
 	if (visibleBarItemSet.dismissTarget != nil && [visibleBarItemSet.dismissTarget respondsToSelector:visibleBarItemSet.dismissAction]) {

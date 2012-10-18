@@ -37,7 +37,7 @@
 	[view addSubview:titleLabel];
 	[view addSubview:progressView];
 	
-	NSArray *items = [NSArray arrayWithObject:[[UIBarButtonItem alloc] initWithCustomView:view]];
+	NSArray *items = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil], [[UIBarButtonItem alloc] initWithCustomView:view], [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
 	
 	self = [super initWithItems:items];
 	if (self != nil) {
