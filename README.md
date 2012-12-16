@@ -21,6 +21,7 @@ For now, there are three pre-defined set:
 You can easily create new sets by extending ___ITBarItemSet___ yourself. 
 
 __Screenshot: __
+
 ![Screenshot](https://github.com/downloads/gregwym/InformaticToolbar/InformaticToolbar)
 
 ## How to use
