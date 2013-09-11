@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "InformaticToolbar"
-  s.version      = "0.2"
+  s.version      = "0.2.1"
   s.summary      = "The information can be shown on a toolbar is more than you can imagine."
 
   s.description  = <<-DESC
@@ -22,8 +22,9 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Greg Wang" => "gregwym@gmail.com" }
 
-  s.platform     = :ios
-  s.source       = { :git => "https://github.com/gregwym/InformaticToolbar.git", :tag => "v0.2" }
+  s.platform     = :ios, '5.0'
+  s.requires_arc = true
+  s.source       = { :git => "https://github.com/gregwym/InformaticToolbar.git", :tag => "v#{s.version}" }
   s.source_files  = 'InformaticToolbar/InformaticToolbar/**/*.{h,m}'
 
 end
