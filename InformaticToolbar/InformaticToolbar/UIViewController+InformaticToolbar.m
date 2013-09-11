@@ -59,20 +59,16 @@ static NSString * const ITVisibleBarItemSet = @"ITVisibleBarItemSet";
 	
 	// Construct the toolbar
 	NSMutableArray *toolbarItems = [visibleBarItemSet.barItems mutableCopy];
-//	[toolbarItems insertObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] atIndex:0];
-//	[toolbarItems addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
-	
+
 	// If is dismissable
 	if (visibleBarItemSet.dismissTarget != nil && [visibleBarItemSet.dismissTarget respondsToSelector:visibleBarItemSet.dismissAction]) {
 		UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] initWithTitle:[NSString stringWithFormat:@"✕"] style:UIBarButtonItemStylePlain target:visibleBarItemSet action:@selector(dismiss:)];
-		[dismissButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:28.0] forKey:UITextAttributeFont] forState:UIControlStateNormal];
 		[toolbarItems addObject:dismissButton];
 	}
 	
 	// If there are more than one set, show the switch button
 	if ([self.barItemSets count] > 1) {
 		UIBarButtonItem *indexButton = [[UIBarButtonItem alloc] initWithTitle:[NSString stringWithFormat:@"➲"] style:UIBarButtonItemStylePlain target:self action:@selector(showNextBarItemSet)];
-		[indexButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:28.0] forKey:UITextAttributeFont] forState:UIControlStateNormal];
 		[toolbarItems insertObject:indexButton atIndex:0];
 	}
 	

@@ -15,7 +15,6 @@
 - (ITConfirmationBarItemSet *)init
 {
 	UIBarButtonItem *confirmButton = [[UIBarButtonItem alloc] initWithTitle:[NSString stringWithFormat:@"✓"] style:UIBarButtonItemStylePlain target:nil action:nil];
-	[confirmButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:28.0] forKey:UITextAttributeFont] forState:UIControlStateNormal];
 	
 	self = [super initWithItems:@[confirmButton]];
 	if (self != nil) {
