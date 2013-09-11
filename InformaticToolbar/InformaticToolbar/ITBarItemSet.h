@@ -6,6 +6,10 @@
 //  Copyright (c) 2012年 Greg Wang. All rights reserved.
 //
 
+#ifndef SYSTEM_VERSION_LESS_THAN
+#define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#endif
+
 @interface ITBarItemSet : NSObject
 
 @property (nonatomic, strong, readonly) NSArray *barItems;
