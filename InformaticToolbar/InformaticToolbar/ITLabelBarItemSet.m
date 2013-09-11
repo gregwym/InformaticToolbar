@@ -26,17 +26,21 @@
 	UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 2.0, labelWidth, 16.0)];
 	textLabel.textAlignment = NSTextAlignmentCenter;
 	textLabel.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
-	textLabel.backgroundColor = [UIColor clearColor];
-	textLabel.textColor = [UIColor whiteColor];
-	textLabel.shadowColor = [UIColor darkGrayColor];
-	
+	if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+		textLabel.backgroundColor = [UIColor clearColor];
+		textLabel.textColor = [UIColor whiteColor];
+		textLabel.shadowColor = [UIColor darkTextColor];
+	}
+
 	UILabel *detailTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 18.0, labelWidth, 14.0)];
 	detailTextLabel.textAlignment = NSTextAlignmentCenter;
 	detailTextLabel.font = [UIFont systemFontOfSize:[UIFont systemFontSize] - 2.0];
-	detailTextLabel.backgroundColor = [UIColor clearColor];
-	detailTextLabel.textColor = [UIColor whiteColor];
-	detailTextLabel.shadowColor = [UIColor darkGrayColor];
-	
+	if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+		detailTextLabel.backgroundColor = [UIColor clearColor];
+		detailTextLabel.textColor = [UIColor whiteColor];
+		detailTextLabel.shadowColor = [UIColor darkTextColor];
+	}
+
 	UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, labelWidth, 32.0)];
 	[view addSubview:textLabel];
 	[view addSubview:detailTextLabel];

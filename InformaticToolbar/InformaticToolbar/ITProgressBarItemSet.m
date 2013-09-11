@@ -26,9 +26,11 @@
 	UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 2.0, progressWidth, 16.0)];
 	titleLabel.textAlignment = NSTextAlignmentCenter;
 	titleLabel.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
-	titleLabel.backgroundColor = [UIColor clearColor];
-	titleLabel.textColor = [UIColor whiteColor];
-	titleLabel.shadowColor = [UIColor darkGrayColor];
+	if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+		titleLabel.backgroundColor = [UIColor clearColor];
+		titleLabel.textColor = [UIColor whiteColor];
+		titleLabel.shadowColor = [UIColor darkTextColor];
+	}
 	
 	UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleBar];
 	progressView.frame = CGRectMake(0.0, 20.0, progressWidth, 12.0);
