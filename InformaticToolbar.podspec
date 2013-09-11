@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/gregwym/InformaticToolbar"
+  s.screenshot   = "https://f.cloud.github.com/assets/510089/1123211/417deee4-1aeb-11e3-93b0-338e7497abbd.png"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Greg Wang" => "gregwym@gmail.com" }
 

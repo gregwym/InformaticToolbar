@@ -22,7 +22,7 @@ You can easily create new sets by extending ___ITBarItemSet___ yourself.
 
 ## Screenshot
 
-![Screenshot](https://github.com/downloads/gregwym/InformaticToolbar/InformaticToolbar)
+![Screenshot](https://f.cloud.github.com/assets/510089/1123211/417deee4-1aeb-11e3-93b0-338e7497abbd.png)
 
 ## Install
 
