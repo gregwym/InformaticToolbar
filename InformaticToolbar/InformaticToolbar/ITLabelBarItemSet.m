@@ -23,7 +23,7 @@
 - (ITLabelBarItemSet *)initWithItems:(NSArray *)barItems;
 {
 	CGFloat labelWidth = barItems == nil ? 240.0 : 216.0;
-	UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 2.0, labelWidth, 16.0)];
+	UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 1.0, labelWidth, 17.0)];
 	textLabel.textAlignment = NSTextAlignmentCenter;
 	textLabel.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
 	if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
